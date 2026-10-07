@@ -1,7 +1,7 @@
 
 const PREFIX = 'travelos-shell-' + encodeURIComponent(new URL(self.registration.scope).pathname) + '-';
-const CACHE = PREFIX + "62214462ec0d";
-const SHELL = ["./","./assets/index-BEmCsluz.js","./assets/index-tKmDIG27.css","./icon.svg","./icons/apple-touch-icon.png","./icons/icon-192.png","./icons/icon-512.png","./icons/icon-maskable.png","./index.html","./land-110m.geojson","./manifest.webmanifest"];
+const CACHE = PREFIX + "064c5f365f4a";
+const SHELL = ["./","./assets/index-Bv013Yu5.css","./assets/index-Cd8TU0zQ.js","./icon.svg","./icons/apple-touch-icon.png","./icons/icon-192.png","./icons/icon-512.png","./icons/icon-maskable.png","./index.html","./land-110m.geojson","./manifest.webmanifest"];
 self.addEventListener('install', (event) => {
   // A freshly discovered worker must not install stale index.html from CDN/browser HTTP cache.
   event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(SHELL.map(url => new Request(url, { cache: 'reload' })))));
